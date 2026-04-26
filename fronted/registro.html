@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>love_code - Registro</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f5f5f5;
+      color: #333;
+    }
+
+    header {
+      background-color: #c0392b;
+      color: white;
+      padding: 15px 30px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    header h1 {
+      font-size: 24px;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin-left: 20px;
+      font-size: 15px;
+    }
+
+    nav a:hover {
+      text-decoration: underline;
+    }
+
+    main {
+      max-width: 900px;
+      margin: 40px auto;
+      padding: 0 20px;
+    }
+
+    section {
+      background-color: white;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      padding: 30px;
+      margin-bottom: 40px;
+    }
+
+    section h2 {
+      font-size: 22px;
+      margin-bottom: 20px;
+      color: #c0392b;
+      border-bottom: 2px solid #c0392b;
+      padding-bottom: 8px;
+    }
+
+    .campo {
+      margin-bottom: 16px;
+    }
+
+    label {
+      display: block;
+      font-size: 14px;
+      font-weight: bold;
+      margin-bottom: 5px;
+    }
+
+    input[type="text"],
+    input[type="email"],
+    input[type="password"],
+    input[type="date"],
+    select,
+    textarea {
+      width: 100%;
+      padding: 9px 12px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      font-size: 14px;
+      font-family: Arial, sans-serif;
+    }
+
+    input:focus,
+    select:focus,
+    textarea:focus {
+      outline: none;
+      border-color: #c0392b;
+    }
+
+    textarea {
+      height: 80px;
+      resize: vertical;
+    }
+
+    .fila {
+      display: flex;
+      gap: 16px;
+    }
+
+    .fila .campo {
+      flex: 1;
+    }
+
+    button[type="submit"] {
+      background-color: #c0392b;
+      color: white;
+      border: none;
+      padding: 10px 25px;
+      border-radius: 5px;
+      font-size: 15px;
+      cursor: pointer;
+      margin-top: 8px;
+    }
+
+    button[type="submit"]:hover {
+      background-color: #a93226;
+    }
+
+    .enlace-form {
+      margin-top: 12px;
+      font-size: 13px;
+      color: #666;
+    }
+
+    .enlace-form a {
+      color: #c0392b;
+      text-decoration: none;
+    }
+
+    .enlace-form a:hover {
+      text-decoration: underline;
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      font-size: 13px;
+      color: #999;
+      border-top: 1px solid #ddd;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>love_code</h1>
+    <nav>
+      <a href="registro.html">Registro</a>
+      <a href="login.html">Iniciar sesion</a>
+      <a href="perfiles.html">Perfiles</a>
+    </nav>
+  </header>
+
+  <main>
+    <section>
+      <h2>Crear cuenta</h2>
+
+      <form>
+        <div class="fila">
+          <div class="campo">
+            <label for="nombre">Nombre</label>
+            <input type="text" id="nombre" placeholder="Tu nombre" />
+          </div>
+          <div class="campo">
+            <label for="apellido">Apellido</label>
+            <input type="text" id="apellido" placeholder="Tu apellido" />
+          </div>
+        </div>
+
+        <div class="campo">
+          <label for="email">Correo electronico</label>
+          <input type="email" id="email" placeholder="ejemplo@correo.com" />
+        </div>
+
+        <div class="campo">
+          <label for="password">Contrasena</label>
+          <input type="password" id="password" placeholder="Minimo 8 caracteres" />
+        </div>
+
+        <div class="fila">
+          <div class="campo">
+            <label for="fecha">Fecha de nacimiento</label>
+            <input type="date" id="fecha" />
+          </div>
+          <div class="campo">
+            <label for="genero">Genero</label>
+            <select id="genero">
+              <option value="">Seleccionar</option>
+              <option>Hombre</option>
+              <option>Mujer</option>
+              <option>Otro</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="campo">
+          <label for="ciudad">Ciudad</label>
+          <input type="text" id="ciudad" placeholder="Tu ciudad" />
+        </div>
+
+        <div class="campo">
+          <label for="bio">Sobre ti</label>
+          <textarea id="bio" placeholder="Cuentanos algo sobre ti..."></textarea>
+        </div>
+
+        <button type="submit">Crear cuenta</button>
+
+        <p class="enlace-form">
+          Ya tienes cuenta? <a href="login.html">Inicia sesion aqui</a>
+        </p>
+      </form>
+    </section>
+  </main>
+
+  <footer>
+    <p>love_code - 2026</p>
+  </footer>
+
+</body>
+</html>
